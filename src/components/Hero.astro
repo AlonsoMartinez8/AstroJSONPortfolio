@@ -1,5 +1,6 @@
 ---
 import SectionLayout from "@l/SectionLayout.astro";
+import Interaction from "@c/Interaction"
 import { Image } from "astro:assets";
 import image from "@img/image.webp";
 import data from "@a/data.json";
@@ -87,4 +88,5 @@ const { telefono, eMail, redes } = data.contacto;
       </div>
     </article>
   </main>
+  <Interaction />
 </SectionLayout>
