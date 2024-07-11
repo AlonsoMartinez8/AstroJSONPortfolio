@@ -1,89 +1,75 @@
 {
-    "sitio": {
-        "titulo": "Alonso Martínez - Portfolio Online",
-        "descripcion": "Curriculum Vitae Digital de Alonso Martínez Aceituno, un Técnico Superior en Desarrollo de Aplicaciones Multiplataforma"
-    },
-    "basicos":{
-        "nombre": "Alonso Martínez Aceituno",
-        "fechaNacimiento": "08 abril, 2004",
-        "pais": "España",
-        "ciudad": "Toledo"
-    },
-    "contacto":{
-        "telefono": "+34 624 51 51 26",
-        "eMail": "alonsomartinez0804@gmail.com",
-        "redes":[
-            {
-                "redSocial": "Instagram",
-                "nombreUsuario": "alon8.dev",
-                "url": "https://...",
-                "iconClass": "ri-instagram-fill"
-            },
-            {
-                "redSocial": "LinkedIn",
-                "nombreUsuario": "Alonso Martínez Aceituno",
-                "url": "https://...",
-                "iconClass": "ri-linkedin-box-fill"
-            },
-            {
-                "redSocial": "GitHub",
-                "nombreUsuario": "AlonsoMartinez8",
-                "url": "https://...",
-                "iconClass": "ri-github-fill"
-            }
-        ]
-    },
-    "formacion": [
-        {
-            "nombreEstudios": "Grado Superior | Desarrollo de Aplicaciones Multiplatadorma",
-            "institucion": "I.E.S. Azarquiel",
-            "ciudad": "Toledo",
-            "fechaInicio": "Septiembre 2022",
-            "fechaFin": "Junio 2024"
-        },
-        {
-            "nombreEstudios": "Bachillerato | Científico Técnico",
-            "institucion": "I.E.S. Juanelo Turriano",
-            "ciudad": "Toledo",
-            "fechaInicio": "Septiembre 2020",
-            "fechaFin": "Junio 2022"
-        }
-    ],
-    "experiencia": [
-        {
-            "nombrePuesto": "Ingeniero I+D+i / Cyber Security",
-            "empresa": "Telefónica",
-            "descripcion": "Desarrollador full-stack multi-plataforma",
-            "fechaInicio": "Julio 2024",
-            "fechaFin": "actualidad"
-        },
-        {
-            "nombrePuesto": "Desarrollador Becario",
-            "empresa": "Zalcu",
-            "descripcion": "Desarrollador en prácticas",
-            "fechaInicio": "Abril 2024",
-            "fechaFin": "Junio 2024"
-        },
-        {
-            "nombrePuesto": "Monitor y Mecánico",
-            "empresa": "Sould Park",
-            "descripcion": "Monitor de bolera y Mecánico de máquinas arcade",
-            "fechaInicio": "Diciembre 2023",
-            "fechaFin": "Marzo 2024"
-        },
-        {
-            "nombrePuesto": "Cocinero",
-            "empresa": "Don G",
-            "descripcion": "Cocinero en línea de cadena de restaurantes",
-            "fechaInicio": "Julio 2023",
-            "fechaFin": "Diciembre 2023"
-        },
-        {
-            "nombrePuesto": "Cocinero y Dependiente",
-            "empresa": "Burger King",
-            "descripcion": "Cocinero y Dependiente de cadena de comida rápida",
-            "fechaInicio": "Julio 2022",
-            "fechaFin": "Julio 2023"
-        }
+  "sitio": {
+    "titulo": "Alonso Martínez - Portfolio Online",
+    "descripcion": "Curriculum Vitae Digital de Alonso Martínez Aceituno, un Técnico Superior en Desarrollo de Aplicaciones Multiplataforma"
+  },
+  "basicos": {
+    "nombre": "Alonso Martínez Aceituno",
+    "fechaNacimiento": "08 abril, 2004",
+    "pais": "España",
+    "ciudad": "Toledo"
+  },
+  "contacto": {
+    "telefono": "+34 624 51 51 26",
+    "eMail": "alonsomartinez0804@gmail.com",
+    "redes": [
+      {
+        "redSocial": "Instagram",
+        "nombreUsuario": "alon8.dev",
+        "url": "https://...",
+        "iconClass": "ri-instagram-fill"
+      },
+      {
+        "redSocial": "LinkedIn",
+        "nombreUsuario": "Alonso Martínez Aceituno",
+        "url": "https://...",
+        "iconClass": "ri-linkedin-box-fill"
+      },
+      {
+        "redSocial": "GitHub",
+        "nombreUsuario": "AlonsoMartinez8",
+        "url": "https://...",
+        "iconClass": "ri-github-fill"
+      }
     ]
+  },
+  "formacion": [
+    {
+      "nombreEstudios": "Grado Superior | Desarrollo de Aplicaciones Multiplatadorma",
+      "institucion": "I.E.S. Azarquiel",
+      "ciudad": "Toledo",
+      "fechaInicio": "Septiembre 2022",
+      "fechaFin": "Junio 2024"
+    },
+    {
+      "nombreEstudios": "Bachillerato | Científico Técnico",
+      "institucion": "I.E.S. Juanelo Turriano",
+      "ciudad": "Toledo",
+      "fechaInicio": "Septiembre 2020",
+      "fechaFin": "Junio 2022"
+    }
+  ],
+  "experiencia": [
+    {
+      "nombrePuesto": "Ingeniero I+D+i / Cyber Security",
+      "empresa": "Telefónica",
+      "descripcion": "Desarrollador full-stack multi-plataforma",
+      "fechaInicio": "Julio 2024",
+      "fechaFin": "actualidad"
+    },
+    {
+      "nombrePuesto": "Desarrollador Becario",
+      "empresa": "Zalcu",
+      "descripcion": "Desarrollador en prácticas",
+      "fechaInicio": "Abril 2024",
+      "fechaFin": "Junio 2024"
+    },
+    {
+      "nombrePuesto": "Monitor y Mecánico",
+      "empresa": "Sould Park",
+      "descripcion": "Monitor de bolera y Mecánico de máquinas arcade",
+      "fechaInicio": "Diciembre 2023",
+      "fechaFin": "Marzo 2024"
+    }
+  ]
 }
