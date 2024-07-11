@@ -29,22 +29,22 @@ export default function HeaderNav({ logo }) {
         </header>
         <ul className="lg:flex lg:items-center lg:justify-end lg:gap-4">
           <li className="w-full px-2 py-1 hover:bg-slate-400/20 hover:text-blue-700 transition-colors text-nowrap">
-            <a href="/" title="Ir a inicio">
+            <a href="/" title="Ir a inicio" onClick={() => setMenuOpen(!menuOpen)}>
               <i className="ri-home-4-fill"></i> Inicio
             </a>
           </li>
           <li className="w-full px-2 py-1 hover:bg-slate-400/20 hover:text-blue-700 transition-colors text-nowrap">
-            <a href="/#contacto" title="Ir a contacto">
+            <a href="/#contacto" title="Ir a contacto" onClick={() => setMenuOpen(!menuOpen)}>
               <i className="ri-phone-fill"></i> Contacto
             </a>
           </li>
           <li className="w-full px-2 py-1 hover:bg-slate-400/20 hover:text-blue-700 transition-colors text-nowrap">
-            <a href="/#formacion" title="Ir a formacion">
+            <a href="/#formacion" title="Ir a formacion" onClick={() => setMenuOpen(!menuOpen)}>
               <i className="ri-book-2-fill"></i> Formación
             </a>
           </li>
           <li className="w-full px-2 py-1 hover:bg-slate-400/20 hover:text-blue-370 transition-colors text-nowrap">
-            <a href="/#experiencia" title="Ir a experiencia">
+            <a href="/#experiencia" title="Ir a experiencia" onClick={() => setMenuOpen(!menuOpen)}>
               <i className="ri-hammer-fill"></i> Experiencia
             </a>
           </li>
