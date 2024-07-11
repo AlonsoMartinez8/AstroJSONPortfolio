@@ -1,0 +1,17 @@
+---
+import MainLayout from "@l/MainLayout.astro";
+import data from "@a/data.json";
+import Hero from "@c/Hero.astro";
+import Formacion from "@/components/Formacion.astro";
+import Experiencia from "@/components/Experiencia.astro";
+import Contacto from "@/components/Contacto.astro";
+
+const { titulo, descripcion } = data.sitio;
+---
+
+<MainLayout title={titulo} description={descripcion}>
+  <Hero />
+  <Experiencia />
+  <Formacion />
+  <Contacto />
+</MainLayout>

@@ -1,0 +1,56 @@
+---
+import SectionLayout from "@l/SectionLayout.astro";
+import ContactMe from "@c/ConctactMe";
+import data from "@a/data.json";
+import { Image } from "astro:assets";
+import contactoImg from "@img/contacto.webp";
+const { telefono, eMail, redes } = data.contacto;
+---
+
+<SectionLayout id="contacto">
+  <ul class="flex flex-wrap items-center justify-between gap-4 mb-4">
+    <li class="hover:text-blue-700 transition-colors">
+      <a
+        href={`tel:${telefono}`}
+        title={`Llamar al ${telefono}`}
+        aria-label="Número de teléfono"
+        ><i class="text-4xl ri-phone-fill"></i></a
+      >
+    </li>
+    <li class="hover:text-blue-700 transition-colors">
+      <a
+        href={`mailto:${eMail}`}
+        title={`Enviar correo a ${eMail}`}
+        aria-label="Dirección de correo electrónico"
+        ><i class="text-4xl ri-mail-send-line"></i></a
+      >
+    </li>
+    {
+      redes.map((r) => (
+        <li id={r.redSocial} class="hover:text-blue-700 transition-colors">
+          <a
+            href={r.url}
+            title={r.nombreUsuario}
+            aria-label={"Cuenta de " + r.redSocial}
+          >
+            <i class={`text-4xl ${r.iconClass}`} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <section class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    
+    <ContactMe client:visible />
+    <div
+      class="hidden lg:flex lg:flex-col items-center justify-center lg:col-span-1 bg-slate-600/50 rounded-xl relative"
+    ><div class="glow"></div>
+      <Image
+        src={contactoImg}
+        loading="eager"
+        decoding="async"
+        alt="Imagen de contacto"
+      />
+    </div>
+  </section>
+</SectionLayout>

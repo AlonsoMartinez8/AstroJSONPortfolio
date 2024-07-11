@@ -1,0 +1,24 @@
+---
+import SectionLayout from "@l/SectionLayout.astro";
+import data from "@a/data.json";
+const formacion = data.formacion;
+---
+
+<SectionLayout id="formacion">
+  <h2 slot="titulo" class="text-2xl font-semibold text-slate-900 mb-4"><i class="ri-book-2-fill"></i> Formación</h2>
+  <ul class="flex items-center justify-start gap-4 flex-wrap flex-col lg:grid lg:grid-cols-2">
+    {
+      formacion.map((f) => (
+        <li class="text-center flex flex-col items-center justify-between gap-4 p-4 bg-gradient-to-tr from-white/75 to-slate-300 rounded-xl w-full h-full lg:col-span-1 shadow-md hover:shadow-lg">
+            <h3 class="text-xl">{f.nombreEstudios}</h3>
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                <p class="text-xs">{f.institucion}</p>
+                <p class="px-2 py-1 bg-slate-700/20 rounded-full text-xs">
+                  {f.fechaInicio} - {f.fechaFin}
+                </p>
+            </div>
+        </li>
+      ))
+    }
+  </ul>
+</SectionLayout>
