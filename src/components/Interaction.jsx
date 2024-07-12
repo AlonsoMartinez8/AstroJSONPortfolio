@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Interaction() {
   return (
@@ -10,10 +10,35 @@ export default function Interaction() {
 }
 
 function Like() {
+  const [isLiked, setIsLiked] = useState(false);
+  const [likes, setLikes] = useState(0);
+  const handleLike = () => {
+    if (!isLiked) {
+      setIsLiked(true);
+      setLikes(likes + 1);
+      // add like to db by fetching an API endpoint
+    }
+  };
+  useEffect(() => {
+    async function fetchLikes() {
+      try {
+        const response = await fetch(`/api/getLikes`);
+        const data = await response.json();
+        if (response.ok) {
+          setLikes(data.likes);
+        } else {
+          console.error(data.error);
+        }
+      } catch (error) {
+        console.error("Error fetching likes:", error);
+      }
+    }
+    fetchLikes();
+  }, []);
   return (
     <article>
-      <button>
-        0 <i className="ri-thumb-up-line"></i>
+      <button onClick={handleLike}>
+        {likes} <i className={`ri-thumb-up-${isLiked ? "fill" : "line"}`}></i>
       </button>
     </article>
   );
