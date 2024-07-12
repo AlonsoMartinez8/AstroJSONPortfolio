@@ -14,10 +14,12 @@ function Like() {
   const [likes, setLikes] = useState(0);
   const handleLike = () => {
     if (!isLiked) {
-      setIsLiked(true);
-      setLikes(likes + 1);
-      // add like to db by fetching an API endpoint
+      addLike();
     }
+  };
+  const addLike = async () => {
+    // fetch API endpoint in TypeScript for adding a like to db
+    // query -> await db.insert(Like).values({id="1"})
   };
   useEffect(() => {
     async function fetchLikes() {
@@ -30,7 +32,7 @@ function Like() {
           console.error(data.error);
         }
       } catch (error) {
-        console.error("Error fetching likes:", error);
+        console.error("Error obteniendo likes:", error);
       }
     }
     fetchLikes();

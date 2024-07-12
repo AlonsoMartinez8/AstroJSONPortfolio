@@ -1,4 +1,3 @@
-import type { APIContext } from "astro";
 import { db, Like } from "astro:db";
 
 export async function GET(): Promise<Response> {
