@@ -16,19 +16,19 @@
       {
         "redSocial": "Instagram",
         "nombreUsuario": "alon8.dev",
-        "url": "https://...",
+        "url": "https://www.instagram.com/alon8.dev/",
         "iconClass": "ri-instagram-fill"
       },
       {
         "redSocial": "LinkedIn",
         "nombreUsuario": "Alonso Martínez Aceituno",
-        "url": "https://...",
+        "url": "https://www.linkedin.com/in/alonso-mart%C3%ADnez-aceituno-a232a82b3/",
         "iconClass": "ri-linkedin-box-fill"
       },
       {
         "redSocial": "GitHub",
         "nombreUsuario": "AlonsoMartinez8",
-        "url": "https://...",
+        "url": "https://github.com/AlonsoMartinez8",
         "iconClass": "ri-github-fill"
       }
     ]
