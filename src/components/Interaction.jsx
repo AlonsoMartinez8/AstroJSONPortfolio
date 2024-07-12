@@ -18,8 +18,23 @@ function Like() {
     }
   };
   const addLike = async () => {
-    // fetch API endpoint in TypeScript for adding a like to db
-    // query -> await db.insert(Like).values({id="1"})
+    try {
+      const response = await fetch('/api/addLike', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setIsLiked(true);
+        setLikes((prevLikes) => prevLikes + 1);
+      } else {
+        console.error('Failed to add like:', await response.json());
+      }
+    } catch (error) {
+      console.error('Error adding like:', error);
+    }
   };
   useEffect(() => {
     async function fetchLikes() {
