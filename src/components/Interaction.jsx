@@ -117,7 +117,7 @@ function Comment() {
             </header>
             <ul className="w-full h-72 px-4 py-2 bg-slate-200/50 overflow-y-scroll flex flex-col items-start justify-start gap-2">
               {comentarios.map((c, index) => (
-                <li key={index}>{c.comment}</li>
+                <li key={index}  className="px-2 py-1 bg-slate-200 rounded-br-xl text-sm">{c.comment}</li>
               ))}
             </ul>
             <form
