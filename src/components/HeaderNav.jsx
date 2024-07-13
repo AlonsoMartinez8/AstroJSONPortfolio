@@ -43,7 +43,7 @@ export default function HeaderNav({ logo }) {
               <i className="ri-book-2-fill"></i> Formación
             </a>
           </li>
-          <li className="w-full px-2 py-1 hover:bg-slate-400/20 hover:text-blue-370 transition-colors text-nowrap">
+          <li className="w-full px-2 py-1 hover:bg-slate-400/20 hover:text-blue-700 transition-colors text-nowrap">
             <a href="/#experiencia" title="Ir a experiencia" onClick={() => setMenuOpen(!menuOpen)}>
               <i className="ri-hammer-fill"></i> Experiencia
             </a>
