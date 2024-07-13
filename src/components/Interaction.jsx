@@ -53,7 +53,7 @@ function Like() {
     fetchLikes();
   }, []);
   return (
-    <article className="text-2xl">
+    <article className="text-2xl hover:text-blue-700">
       <button onClick={handleLike}>
         {likes}{" "}
         <i
@@ -72,9 +72,29 @@ function Comment() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (comentario !== "" && comentario !== null) {
-      // Añadir comentario
-      // getComentarios();
-      // setComentario("");
+      addComentario();
+    }
+  };
+
+  const addComentario = async () => {
+    try {
+      const response = await fetch("/api/addComentario", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ comentario }),
+      });
+
+      if (response.ok) {
+        setComentario("");
+        getComentarios();
+      } else {
+        const errorData = await response.json();
+        console.error("Failed to add comment:", errorData.message);
+      }
+    } catch (error) {
+      console.error("Error adding the comment:", error);
     }
   };
 
@@ -98,7 +118,7 @@ function Comment() {
 
   return (
     <>
-      <article className="text-2xl">
+      <article className="text-2xl hover:text-blue-700">
         <button onClick={() => setOpen(true)}>
           {comentarios.length} <i className="ri-chat-4-line"></i>
         </button>
@@ -117,7 +137,12 @@ function Comment() {
             </header>
             <ul className="w-full h-72 px-4 py-2 bg-slate-200/50 overflow-y-scroll flex flex-col items-start justify-start gap-2">
               {comentarios.map((c, index) => (
-                <li key={index}  className="px-2 py-1 bg-slate-200 rounded-br-xl text-sm">{c.comment}</li>
+                <li
+                  key={index}
+                  className="px-2 py-1 bg-slate-200 rounded-br-xl text-sm"
+                >
+                  {c.comment}
+                </li>
               ))}
             </ul>
             <form
