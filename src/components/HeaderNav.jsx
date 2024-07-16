@@ -10,7 +10,7 @@ export default function HeaderNav({ logo }) {
       <section
         className={`${
           !menuOpen && "hidden lg:flex"
-        } absolute lg:relative top-0 left-0 w-full lg:w-auto min-h-screen lg:min-h-0 z-50 px-4 py-2 bg-gradient-to-tr from-slate-200 to-slate-400 lg:bg-none`}
+        } absolute lg:relative top-0 left-0 w-full lg:w-auto min-h-screen lg:min-h-0 z-50 px-4 py-2 bg-gradient-to-b from-slate-200 from-30% to-slate-900/50 lg:bg-none`}
       >
         <header className="flex items-center justify-between gap-4 mb-4">
           <aside className="lg:hidden flex items-center justify-start gap-4">
