@@ -9,7 +9,7 @@ const { telefono, eMail, redes } = data.contacto;
 ---
 
 <SectionLayout id="inicio">
-  <main class="relative">
+  <main class="relative" itemscope itemtype="https://schema.org/Person">
     <div class="glow"></div>
     <article
       class="flex flex-col lg:flex-row items-center justify-between gap-4"
@@ -21,33 +21,48 @@ const { telefono, eMail, redes } = data.contacto;
         loading="eager"
         quality="max"
         alt="Imagen de Alonso Martínez"
+        itemprop="image"
       />
       <div
         class="text-pretty text-center lg:text-end flex flex-col gap-4 justify-center items-center lg:items-end"
       >
-        <h2
+        <h1
           class="text-4xl font-semibold w-fit bg-gradient-to-r from-blue-900 to-slate-900 text-transparent bg-clip-text"
+          itemprop="name"
         >
           {nombre}
-        </h2>
+        </h1>
         <h3 class="text-xl">
-          Desarrollador <strong class="text-blue-700">Full-Stack</strong>
+          <span itemprop="jobTitle">Desarrollador</span>
+          <strong class="text-blue-700">Full-Stack</strong>
           con <strong class="text-blue-700">+3 años</strong> de experiencia.
         </h3>
         <p class="text-neutral-900/80">
           Además de un apasionado y profesional del <strong
             class="text-slate-700"
-            >desarrollo de software multiplataforma</strong
-          >, también soy un entusiasta de la <strong class="text-slate-700"
-            >producción audiovisual</strong
+            itemprop="skills">desarrollo de software multiplataforma</strong
+          >, también soy un entusiasta de la <strong
+            class="text-slate-700"
+            itemprop="hobby">producción audiovisual</strong
           >.
         </p>
         <ul class="flex items-center justify-around lg:justify-end gap-4">
-          <li class="px-2 py-1 bg-slate-700/20 rounded-full">
+          <li
+            class="px-2 py-1 bg-slate-700/20 rounded-full"
+            itemprop="birthDate"
+          >
             {fechaNacimiento}
           </li>
           <li class="px-2 py-1 bg-slate-700/20 rounded-full">
-            {ciudad}, {pais}
+            <span
+              itemprop="address"
+              itemscope
+              itemtype="https://schema.org/PostalAddress"
+            >
+              <span itemprop="addressLocality">{ciudad}</span>, <span
+                itemprop="addressCountry">{pais}</span
+              >
+            </span>
           </li>
         </ul>
         <ul
@@ -58,16 +73,18 @@ const { telefono, eMail, redes } = data.contacto;
               href={`tel:${telefono}`}
               title={`Llamar al ${telefono}`}
               aria-label="Número de teléfono"
-              ><i class="text-2xl ri-phone-fill"></i></a
             >
+              <i class="text-2xl ri-phone-fill" itemprop="telephone"></i>
+            </a>
           </li>
           <li class="hover:text-blue-700 transition-colors">
             <a
               href={`mailto:${eMail}`}
               title={`Enviar correo a ${eMail}`}
               aria-label="Dirección de correo electrónico"
-              ><i class="text-2xl ri-mail-send-line"></i></a
             >
+              <i class="text-2xl ri-mail-send-line" itemprop="email"></i>
+            </a>
           </li>
           {
             redes.map((r) => (
@@ -79,6 +96,7 @@ const { telefono, eMail, redes } = data.contacto;
                   href={r.url}
                   title={r.nombreUsuario}
                   aria-label={"Cuenta de " + r.redSocial}
+                  itemprop="sameAs"
                 >
                   <i class={`text-2xl ${r.iconClass}`} />
                 </a>

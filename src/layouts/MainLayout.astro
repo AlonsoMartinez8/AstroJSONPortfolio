@@ -7,6 +7,7 @@ interface Props {
 const { title, description } = Astro.props;
 import HeaderNav from "@c/HeaderNav";
 import { Image } from "astro:assets";
+import favicon from "@img/favicon.ico";
 import logo from "@img/logo.webp";
 import "remixicon/fonts/remixicon.css";
 import Footer from "@/components/Footer.astro";
@@ -18,8 +19,22 @@ import Footer from "@/components/Footer.astro";
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={logo.src} />
+    <link rel="icon" type="image/svg+xml" href={favicon} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:url" content="https://www.ejemplo.com/tu-pagina">
+    <meta property="og:type" content="profile">
+    <meta property="og:image" content={logo.src}>
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:url" content="https://alonso-martinez.vercel.app">
+    <meta name="twitter:image" content={logo.src}>
+
     <title>{title}</title>
   </head>
   <body class="min-h-[100vh] bg-gradient-to-tr from-slate-200 to-gray-300">
@@ -42,12 +57,12 @@ import Footer from "@/components/Footer.astro";
       <HeaderNav client:visible logo={logo} />
     </header>
     <slot />
-    <Footer/>
+    <Footer />
   </body>
 </html>
 
 <style is:global>
-  html{
+  html {
     scroll-behavior: smooth;
   }
   .glow {
@@ -64,14 +79,14 @@ import Footer from "@/components/Footer.astro";
   }
 </style>
 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
 <script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "xvtNQxliFQ9Mcftz_",
-      });
-   })();
+  (function () {
+    emailjs.init({
+      publicKey: "xvtNQxliFQ9Mcftz_",
+    });
+  })();
 </script>
-

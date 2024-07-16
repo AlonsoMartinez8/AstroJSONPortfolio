@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alonso-martinez.vercel.app/sitemap-index.xml
