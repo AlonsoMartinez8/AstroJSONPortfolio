@@ -18,7 +18,7 @@ export default function ConctactMe() {
       setWarn({ warn: true, msg: "Faltan datos por rellenar" });
     } else {
       emailjs
-        .sendForm("service_q4qafp6", "template_n866cvp", form.current, {
+        .sendForm("service_kj2org8", "template_n866cvp", form.current, {
           publicKey: "xvtNQxliFQ9Mcftz_",
         })
         .then(
@@ -104,3 +104,4 @@ export default function ConctactMe() {
     </form>
   );
 }
+
